@@ -63,43 +63,44 @@ block body
                         var arrayText = [
                         {
                         className: 'is-active',
-                        text: 'Из чего она состоит?',
+                        text: 'Что такое\n'+
+                        '«Lost & Found: undergraduate»?',
                         id: '#id_0'
                         },
                         {
                         className: '',
                         text: 'Что вас ждет?',
-                        id: '#id_1'
+                        id: '#id_0'
                         },
                         {
                         className: '',
                         text: 'Для кого она предназначена?',
-                        id: '#id_2'
+                        id: '#id_1'
                         },
                         {
                         className: '',
                         text: 'Сколько требуется времени на прохождение?',
+                        id: '#id_2'
+                        },
+                        {
+                        className: '',
+                        text: 'Что я получу после окончания «Lost & Found: undergraduate»?',
                         id: '#id_3'
                         },
                         {
                         className: '',
-                        text: 'Что я получу после окончания «Родительского собрания»?',
+                        text: 'Каковы преимущества и дополнительные возможноститой программы?',
                         id: '#id_4'
                         },
                         {
                         className: '',
-                        text: 'Каковы преимущества и дополнительные возможноститой программы?',
+                        text: 'Отзывы',
                         id: '#id_5'
                         },
                         {
                         className: '',
-                        text: 'Отзывы',
+                        text: 'Хочу пройти “Lost &  Found: undergraduate”. Как это сделать? ',
                         id: '#id_6'
-                        },
-                        {
-                        className: '',
-                        text: 'Хочу пройти «Родительское собрание».Как это сделать?',
-                        id: '#id_7'
                         },
                         ]
                     +sidebar(arrayText)
@@ -114,7 +115,7 @@ block body
                             }
                             ]
                         +title(arrayTitle)
-                        .text.text--margin
+                        .text.text--margin#id_0
                             | Цикл Lost & Found. Представьте себе, что вы потеряли мотивацию
                             | для поступления на бакалавриат в вузы США. Опустили руки.
                             | для поступления на бакалавриат в вузы США. Опустили руки.
@@ -144,7 +145,7 @@ block body
                                 ]
                             +block-warning(arrayWarningText)
 
-                        .block-items--margin2.js-block-scroll#id_0
+                        .block-items--margin2.js-block-scroll
                             -
                                 var arrayItems = [
                                 {
@@ -185,7 +186,7 @@ block body
                                 ]
                             +block-items(arrayItems)
 
-                        .block-images-text--margin
+                        .block-images-text--margin#id_1
                             -
                                 var arrayBlock = [
                                 {
@@ -196,7 +197,7 @@ block body
                                 ]
                             +block-images-text(arrayBlock)
 
-                        .block-items--margin.js-block-scroll#id_1
+                        .block-items--margin.js-block-scroll
                             p.text-thin Для всех, у кого возникли трудности на пути к долгожданному поступлению:
                             .flex.flex--row.block-icon-wrapper
                                 -
@@ -231,14 +232,14 @@ block body
                                     ]
                                 +block-items-row(arrayItemsRow)
 
-                        .block-text--margin
+                        .block-text--margin#id_2
                             +block-text("Цикл Lost & Found длится 1 год и состоит из 4 встреч, каждая из которых \n" +
                             "проходит раз в три месяца. Задача цикла — чтобы вы обрели в себе \n" +
                             "уверенность, прошли успешно 120 Credits Undergraduate и начали работать \n" +
                             "с экспертом EducationUSA Russia. И это вы можете сделать в любой момент!")
 
 
-                        .block-items--margin1.js-block-scroll#id_4
+                        .block-items--margin1.js-block-scroll#id_3
                             p.text-thin Цикл не обязательно закончить полностью. После любого шага вы можете поверить в себя, успешно пройти 120 Credits Undergraduate и заново начать
                                         |индивидуальные консультации с экспертами EducationUSA Russia.
                             -
@@ -307,7 +308,7 @@ block body
                             ]
                         +slick(arraySlick)
 
-                        .block-text--margin1
+                        .block-text--margin1#id_6
                             +block-text("Вы можете присоединиться с самого первого шага цикла, который проходит \n" +
                             "зимой, или на любом другом этапе. Просто приходите на встречу с консультантом (место проведения всегда указано в Афише)  или \n" +
                             "присоединяйтесь онлайн, и мы поможем разобраться в сложных для вас \n" +

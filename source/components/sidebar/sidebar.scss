@@ -14,7 +14,8 @@
         font-size: 30px;
         color: #d9d9d6;
         text-decoration: none;
-
+        transition: color 0.4s, border-color 0.4s;
+        border-left: 2px solid transparent;
         &.is-active {
             border-left: 2px solid #330072;
             color: #000;
@@ -34,6 +35,11 @@
         @media (max-width: 991px) {
             color: #ffffff;
             opacity: 0.6;
+        }
+
+        &:hover {
+            border-color: #330072;
+            color: #000;
         }
     }
 

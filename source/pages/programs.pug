@@ -56,8 +56,9 @@ block body
                         var arrayText = [
                             {
                                 className: 'is-active',
-                                text: 'Из чего она состоит?',
-                                id: '#id_'
+                                text: 'Что такое программа\n'+
+                                '«Родительское собрание»?',
+                                id: '#id_0'
                             },
                             {
                                 className: '',
@@ -87,7 +88,7 @@ block body
                             {
                                 className: '',
                                 text: 'Отзывы',
-                                id: '#id_5'
+                                id: '#'
                             },
                             {
                                 className: '',
@@ -107,17 +108,17 @@ block body
                                 }
                             ]
                         +title(arrayTitle)
-                        .text.text--margin
+                        .text.text--margin#id_0
                             | «Родительское собрание» — это программа, которая даёт родителям
                             | информацию о том, как проходит п оступление в вузы США.
                             | Благодаря практическим советам, основанным на опыте многих
                             | студентов, вы сможете помочь своему ребенку и поддержать его
                             | на этом непростом пути.
 
-                        .block-images--margin.js-block-scroll#id_0
+                        .block-images--margin.js-block-scroll
                             +block-images("../images/images-1.png", "#f4f4f2")
 
-                        .block-items--margin.js-block-scroll#id_1
+                        .block-items--margin.js-block-scroll
                             -
                                 var arrayItems = [
                                     {
@@ -136,7 +137,7 @@ block body
                                 ]
                             +block-items(arrayItems)
 
-                        .block-images-text--margin
+                        .block-images-text--margin#id_1
                             -
                                 var arrayBlock = [
                                     {
@@ -146,10 +147,10 @@ block body
                                 ]
                             +block-images-text(arrayBlock)
 
-                        .block-text--margin
+                        .block-text--margin#id_2
                             +block-text('Программа рассчитана на один год. Все лекции и семинары разбиты по темам и предлагаются в течение года с января по декабрь, однако вы можете присоединиться к ней в любое время.')
 
-                        .block-items--margin2
+                        .block-items--margin2#id_3
                             -
                                 var arrayItems = [
                                     {
@@ -162,7 +163,7 @@ block body
                                     }
                                 ]
                             +block-items(arrayItems)
-                        .block-thumbnail--margin.js-block-scroll#id_3
+                        .block-thumbnail--margin.js-block-scroll#id_4
                             -
                                 var arrayThumbnail = [
                                     {
@@ -212,7 +213,7 @@ block body
                             ]
                         +slick(arraySlick)
 
-                        .block-images-text--margin2
+                        .block-images-text--margin2#id_6
                             -
                                 var arrayBlock = [
                                     {

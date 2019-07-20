@@ -12,6 +12,7 @@ include ../components/title/title
 include ../components/slick/slick
 include ../components/header/header
 include ../components/footer/footer
+include ../components/form/form
 
 block var
     -
@@ -37,6 +38,8 @@ block var
         'https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
         'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.8/inputmask/inputmask.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.8/inputmask/jquery.inputmask.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js'
         ];
 
@@ -49,15 +52,15 @@ block body
             +header()
 
     block main
-        main.main.credit
+        main.main.pre-ccc
             .container.js-parent-sticky
                 .col-left.js-sticky
                     -
                         var arrayText = [
                         {
                         className: 'is-active',
-                        text: 'Что такое программа\n'+
-                        '«120 Credits»?',
+                        text: 'Что такое\n'+
+                        '“Pre-Competitive College Club”?\n',
                         id: '#id_0'
                         },
                         {
@@ -77,7 +80,7 @@ block body
                         },
                         {
                         className: '',
-                        text: 'Что я получу после окончания “120 Credits”?',
+                        text: 'Что я получу после окончания Pre-CCC?',
                         id: '#id_3'
                         },
                         {
@@ -88,12 +91,12 @@ block body
                         {
                         className: '',
                         text: 'Отзывы',
-                        id: '#id_5'
+                        id: '#'
                         },
                         {
                         className: '',
-                        text: 'Хочу пройти “120 Credits”. Как это сделать? ',
-                        id: '#id_6'
+                        text: 'Хочу пройти Pre-CCC. Как это сделать? ',
+                        id: '#id_5'
                         },
                         ]
                     +sidebar(arrayText)
@@ -102,61 +105,37 @@ block body
                         -
                             var arrayTitle = [
                             {
-                            img: "../images/credit/credit.png",
-                            title: "120 <br/> Credits",
+                            img: "../images/pre-ccc/pre-ccc.png",
+                            title: "Pre-Competitive <br/> College <br/> Club",
                             text: "Program"
                             }
                             ]
                         +title(arrayTitle)
-                        .text.text--margin#id_0
-                            | Онлайн-программа 120 Credits — это ваш самый первый шаг
-                            | для начала работы с EducationUSA Russia. Успешно пройдя
-                            | программу и очень внимательно выполнив домашние задания
-                            | вам будет легче ответить себе на вопрос: подходит ли именно
-                            | мне обучение в США? Готов ли Я не сдаваться и потратить
-                            | 12 – 36 месяцев и максимум сил на подготовку к тестам,
-                            | выбор вуза, поиск финансирования.
-                            p.text--margin-p
-                                | Программа 120 Credits даст вам ответы на 85% базовых вопросов.
-                                | После окончания программы в течение 7 дней с вами свяжется
-                                | консультант EducationUSA Russia и вы сможете заняться
-                                | выработкой индивидуальной стратегии поступления в выбранные
-                                | вами колледжи и университеты США.
+                        .text.text--margin.js-block-scroll#id_0
+                            | Pre-Competitive College Club (Pre-ССС) — это программа для активных
+                            | и целеустремленных старшеклассников, направленная на развитие
+                            | языковых навыков и повышение уровня знания английского языка. <br/> <br/> Программа поможет тебе проявить свои организаторские
+                            | способности и научиться управлять временем: быть организованным
+                            | и пунктуальным.
 
-                        .block-images--margin.js-block-scroll
-                            +block-images("../images/credit/images-1.png", "#f4f4f2")
+                        .block-images--margin
+                            +block-images("../images/pre-ccc/images-1.png", "#f4f4f2")
 
-                        .block-items--margin2.js-block-scroll
-
-                            p.text-bold.pl-150.t-sm-c Программа состоит из нескольких этапов:
+                        .block-items--margin
                             -
                                 var arrayItems = [
                                 {
-                                images: "../images/credit/icon-1.png",
-                                textTitle: "Вводная лекция",
-                                text: "Знакомство с системой высшего образования США, ее \n"+
-                                "особенностями и требованиями к поступающим на программы \n"+
-                                "бакалавриата, магистратуры или аспирантуры"
+                                images: "../images/pre-ccc/icon-1.png",
+                                text: "интенсивные online занятия английским языком каждое \n"+
+                                "воскресенье в течение года;"
                                 },
                                 {
-                                images: "../images/credit/icon-2.png",
-                                textTitle: "Шаг 1. Выберите, где учиться",
-                                text: "Выбор подходящего именно вам колледжа, университета \n"+
-                                "или программы"
+                                images: "../images/pre-ccc/icon-2.png",
+                                text: "регулярное выполнение домашних заданий"
                                 },
                                 {
-                                images: "../images/credit/icon-3.png",
-                                textTitle: "Шаг 2. Найдите источник финансирования",
-                                text: "Информация о видах финансовой поддержки. Изучение \n"+
-                                "критериев, на основе которых вузы принимают решения о \n"+
-                                "предоставлении финансирования иностранным студентам"
-                                },
-                                {
-                                images: "../images/credit/icon-4.png",
-                                textTitle: "Шаг 3. Подготовьте документы для поступления",
-                                text: "Знакомство со стандартным списком документов, необходимых \n"+
-                                "для поступления. Советы по корректному заполнению форм и \n"+
-                                "выработка плана действий по подготовке документов"
+                                images: "../images/pre-ccc/icon-3.png",
+                                text: "активное участие в мероприятиях EducationUSA Russia;"
                                 }
                                 ]
                             +block-items(arrayItems)
@@ -165,41 +144,59 @@ block body
                             -
                                 var arrayBlock = [
                                 {
-                                img: "../images/credit/images-2.png",
-                                text: "120 Credits предназначена для тех, кто планирует поступать на бакалавриат (undergraduate) в колледж или университет США (или получить Associate Degree в Community College) а также для тех, кто хочет поступить в магистратуру / аспирантуру США (graduate). Программа доступна в 2 вариантах: undergraduate и graduate."
+                                img: "../images/pre-ccc/images-2.png",
+                                text: "Для учеников 8-9 класса, которые задумываются о высшем образование в США, но еще не знают английский настолько хорошо, чтобы поступить в Competitive College Club (ССС). Одно из требований к претендентам на вступление в Pre-CCC: хорошая учеба в школе (оценки 4 и 5)."
                                 }
                                 ]
                             +block-images-text(arrayBlock)
 
-                        .block-text--margin#id_2
-                            +block-text('От 7 до 30 дней и более. Программа проходится вами самостоятельно, поэтому время прохождения зависит только от вас. Важно, чтобы вы разобрались в материале, почитали дополнительные ресурсы и внимательно выполнили домашние задания после каждого шага. Для начала индивидуальных консультаций программа должна быть закончена с результатом не менее 70%. Консультанты оставляют за собой право попросить вас еще раз пройти программу, если качество выполнения домашних заданий не соответствует ожиданиям.')
+                        .block-text--margin.js-block-scroll#id_2
+                            +block-text('Один год. Программа начинается в сентябре и длится весь год. Заявки \n' +
+                            'на конкурсный отбор в программу принимаются в Августе.<br/> <br/> Участники должны иметь возможность принимать участие в мероприятиях \n' +
+                            'клуба не менее 4-х раз в месяц в учебный период (по воскресеньям примерно \n' +
+                            '13:30 мск). Участник Pre-ССС должен быть активным — участвовать \n' +
+                            'в дискуссиях, работать над эссе и выполнять домашние задания.')
 
-                        .block-items--margin1.js-block-scroll#id_4
-                            p.text-bold.pl-150.t-sm-c Только после успешного окончания программы <br/> 120 Credits вам будут доступны:
+                        .block-items--margin2.js-block-scroll#id_3
                             -
                                 var arrayItems = [
                                 {
-                                images: "../images/credit/icon-5.png",
-                                text: "индивидуальные консультации по выработке стратегии поступления\n"
+                                images: "../images/pre-ccc/icon-4.png",
+                                text: "Комплексное развитие языковых навыков: чтение, разговорная речь, письмо. Ты сможешь понимать английский язык на академическом уровне!"
                                 },
                                 {
-                                images: "../images/credit/icon-6.png",
-                                text: "участие в программе Graduate Student Advising Program (GSA): необходимой для претендентов на Opportunity Funds и открытой для всех поступающих в магистратуру / аспирантуру\n"
+                                images: "../images/pre-ccc/icon-5.png",
+                                text: "Улучшение школьных оценок по английскому языку!"
                                 },
                                 {
-                                images: "../images/credit/icon-7.png",
-                                text: "возможность участия в волонтерских проектах"
+                                images: "../images/pre-ccc/icon-6.png",
+                                text: "Регулярную языковую практику, которая поможет тебе легко и непринужденно общаться и обучаться на английском;"
                                 },
                                 {
-                                images: "../images/credit/icon-8.png",
-                                text: "посещение закрытых групп подготовки к экзаменам и выработки навыков публичных выступлений и других soft skills"
-                                },
-                                {
-                                images: "../images/credit/icon-9.png",
-                                text: "любые другие программы и инициативы EducationUSA Russia"
+                                images: "../images/pre-ccc/icon-7.png",
+                                text: "Информацию об американской культуре и академической составляющей жизни студентов."
                                 }
                                 ]
                             +block-items(arrayItems)
+                        .block-thumbnail--margin.js-block-scroll.js-block-scroll#id_4
+                            -
+                                var arrayThumbnail = [
+                                {
+                                img: "../images/pre-ccc/images-3.png",
+                                text: "Возможность по окончании программы подать заявку на программу ССС: у вас \n"+
+                                "будет очень хороший шанс "
+                                },
+                                {
+                                img: "../images/pre-ccc/images-4.png",
+                                text: "Общение со сверстниками, которые так же, как и вы, хотят учиться в США. Вам будет что обсудить! Программа поможет найти \n"+
+                                "новых друзей и "
+                                },
+                                {
+                                img: "../images/pre-ccc/images-5.png",
+                                text: "Работа в группе и самостоятельное выполнение заданий. Это сделает вас ответственнее и психологически подготовит к будущему поступлению"
+                                }
+                                ]
+                            +block-thumbnail(arrayThumbnail)
 
                         -
                             var arraySlick = [
@@ -233,17 +230,49 @@ block body
                             ]
                         +slick(arraySlick)
 
-                        .block-text--margin3#id_6
-                            +block-text('В зависимости от того, на бакалавриат или в магистратуру/аспирантуру вы планируете поступать, выбирайте один из двух вариантов программы: Undergraduate или Graduate - и регистрируйтесь!')
+                        .block-list--margin.js-block-scroll#id_5
+                            .pre-ccc-info
+                                p.text-bold.pl-150 Первый раунд:
+                                -
+                                    var arrayItems = [
+                                    {
+                                    images: "../images/pre-ccc/icon-8.png",
+                                    text: "С 5 августа по 19 августа 2019 вам нужно будет заполнить онлайн-заявку. Заявка будет открыта с 5 Августа (12-00 время Московское) до 19 Августа (12-00 время Московское). "
+                                    },
+                                    {
+                                    images: "../images/pre-ccc/icon-9.png",
+                                    text: "Написать эссе на одну страницу на английском языке. Инструкции для эссе будут на последней странице онлайн-формы заявки."
+                                    },
+                                    {
+                                    images: "../images/pre-ccc/icon-10.png",
+                                    text: "Отправить скан или скриншот выписки о вашей успеваемости за осеннюю и весеннюю четверти 2018 - 2019 годов по адресу adviser@educationusarussia.org"
+                                    }
+                                    ]
+                                +block-items(arrayItems)
 
-                        .wrapper-btn
-                            a(href="javascript:void(0)").btn-red Пройду
-                                span.btn-red__bold Undergraduate*
-                            p.t-a-c * для зачисления на бакалавриат
+                                p.text-bold.pl-150.mt-90 Второй раунд:
+                                -
+                                    var arrayItems = [
+                                    {
+                                    images: "../images/pre-ccc/icon-8.png",
+                                    text: "с 14 августа – 22 августа 2019 пройдите интервью на английском языке. Школьники, допущенные ко 2 раунду будут уведомлены о процедуре собеседования. "
+                                    },
+                                    {
+                                    images: "../images/pre-ccc/icon-9.png",
+                                    text: "27 августа все участники второго раунда получат решение о зачислении. Те, кто будут приняты в Pre-CCC, получат дальнейшие инструкции и информацию. "
+                                    },
+                                    {
+                                    images: "../images/pre-ccc/icon-10.png",
+                                    text: "30 августа все приняты в pre-CCC школьники должны будут пройти организационную сессию "
+                                    },
+                                    {
+                                    images: "../images/pre-ccc/icon-11.png",
+                                    text: "8 сентября, в воскресенье состоится первое занятие Pre-CCC."
+                                    }
+                                    ]
+                                +block-items(arrayItems)
 
-                        a(href="javascript:void(0)").btn-blue Пройду
-                            span.btn-blue__bold Graduate*
-                        p.t-a-c * для поступления на аспирантру
+                        +form()
 
                         .question-program.t-a-c
                             | Если у вас есть вопросы по программе,<br> напишите на <a class="link-red" href="mail:adviser@educationusarussia.org">adviser@educationusarussia.org</a>

@@ -6,7 +6,7 @@ class Scroll {
         this.blockToScroll = $('.js-block-scroll');
         this.arrayOffset = [];
         this.setEvents();
-        this.saveOffset();
+        // this.saveOffset();
     }
 
     setEvents() {
@@ -16,9 +16,9 @@ class Scroll {
             this.toggleClass($(e.target));
         });
 
-        $(window).on('scroll', debounce(() => {
-            this.toggleActiveClass();
-        }));
+        // $(window).on('scroll', debounce(() => {
+        //     this.toggleActiveClass();
+        // }));
     }
 
     scrollBlock($target) {

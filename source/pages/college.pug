@@ -62,7 +62,8 @@ block body
                         var arrayText = [
                         {
                         className: 'is-active',
-                        text: 'Из чего она состоит?',
+                        text: 'Что такое\n'+
+                        '«Competitive College Club»?\n',
                         id: '#id_0'
                         },
                         {
@@ -73,32 +74,32 @@ block body
                         {
                         className: '',
                         text: 'Для кого она предназначена?',
-                        id: '#id_0'
+                        id: '#id_1'
                         },
                         {
                         className: '',
                         text: 'Сколько требуется времени на прохождение?',
-                        id: '#id_0'
+                        id: '#id_2'
                         },
                         {
                         className: '',
-                        text: 'Что я получу после окончания «Родительского собрания»?',
-                        id: '#id_0'
+                        text: 'Что я получу после окончания ССС?',
+                        id: '#id_3'
                         },
                         {
                         className: '',
                         text: 'Каковы преимущества и дополнительные возможноститой программы?',
-                        id: '#id_0'
+                        id: '#id_4'
                         },
                         {
                         className: '',
                         text: 'Отзывы',
-                        id: '#id_0'
+                        id: '#'
                         },
                         {
                         className: '',
-                        text: 'Хочу пройти «Родительское собрание».Как это сделать?',
-                        id: '#id_0'
+                        text: 'Хочу пройти ССС. Как это сделать? ',
+                        id: '#id_5'
                         },
                         ]
                     +sidebar(arrayText)
@@ -113,15 +114,15 @@ block body
                             }
                             ]
                         +title(arrayTitle)
-                        .text.text--margin
+                        .text.text--margin#id_0
                             | Сompetitive Сollege Сlub (ССС) — это программа, которая дает
                             | возможность приобрести полезные знания и навыки, повышающие
                             | вероятность поступления в вузы США.
 
-                        .block-images--margin.js-block-scroll#id_0
+                        .block-images--margin.js-block-scroll
                             +block-images("../images/college/images-1.png", "#cedc00")
 
-                        .block-items--margin.js-block-scroll#id_1
+                        .block-items--margin.js-block-scroll
                             .flex.block-icon-wrapper
                                 .block-items-column.block-items-column--left
                                     -
@@ -162,7 +163,7 @@ block body
                                         ]
                                     +block-items-small(arrayItemsSmall)
 
-                        .block-warning--margin.js-block-scroll#id_3
+                        .block-warning--margin.js-block-scroll#id_1
                             -
                                 var arrayWarningText = [
                                     {
@@ -174,7 +175,7 @@ block body
                                 ]
                             +block-warning(arrayWarningText)
 
-                        .block-images-text--margin.js-block-scroll#id_4
+                        .block-images-text--margin.js-block-scroll
                             -
                                 var arrayBlock = [
                                 {
@@ -187,12 +188,12 @@ block body
                                 ]
                             +block-images-text(arrayBlock)
 
-                        .block-text--margin
+                        .block-text--margin#id_2
                             +block-text('Программа рассчитана на 2 года. Для участников действует строгое \n' +
                             'правило — обязательное посещение встреч клуба. Не менее двух раз в месяц \n' +
                             'в течение учебного года и не менее четырех раз в месяц в летний период')
 
-                        .block-items--margin2
+                        .block-items--margin2#id_3
                             -
                                 var arrayItems = [
                                 {
@@ -218,7 +219,7 @@ block body
                                 }
                                 ]
                             +block-items(arrayItems)
-                        .block-thumbnail--margin
+                        .block-thumbnail--margin#id_4
                             -
                                 var arrayThumbnail = [
                                 {
@@ -269,7 +270,7 @@ block body
                             ]
                         +slick(arraySlick)
 
-                        .block-list--margin
+                        .block-list--margin#id_5
                             -
                                 var arrayList = [
                                     {

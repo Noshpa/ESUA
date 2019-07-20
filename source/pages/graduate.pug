@@ -58,43 +58,44 @@ block body
                         var arrayText = [
                         {
                         className: 'is-active',
-                        text: 'Из чего она состоит?',
+                        text: 'Что такое\n'+
+                        '«Graduate Students Advising Program»?',
                         id: '#id_0'
                         },
                         {
                         className: '',
                         text: 'Что вас ждет?',
-                        id: '#id_1'
+                        id: '#id_0'
                         },
                         {
                         className: '',
                         text: 'Для кого она предназначена?',
-                        id: '#id_2'
+                        id: '#id_1'
                         },
                         {
                         className: '',
                         text: 'Сколько требуется времени на прохождение?',
+                        id: '#id_2'
+                        },
+                        {
+                        className: '',
+                        text: 'Что я получу после окончания «Graduate Students Advising Program»?',
                         id: '#id_3'
                         },
                         {
                         className: '',
-                        text: 'Что я получу после окончания «Родительского собрания»?',
+                        text: 'Каковы преимущества и дополнительные возможноститой программы?',
                         id: '#id_4'
                         },
                         {
                         className: '',
-                        text: 'Каковы преимущества и дополнительные возможноститой программы?',
+                        text: 'Отзывы',
                         id: '#id_5'
                         },
                         {
                         className: '',
-                        text: 'Отзывы',
+                        text: 'Хочу пройти GSAP. Как это сделать? ',
                         id: '#id_6'
-                        },
-                        {
-                        className: '',
-                        text: 'Хочу пройти «Родительское собрание».Как это сделать?',
-                        id: '#id_7'
                         },
                         ]
                     +sidebar(arrayText)
@@ -121,7 +122,7 @@ block body
                             +block-images("../images/gsa/images-1.png", "#f4f4f2")
 
 
-                        .block-warning--margin
+                        .block-warning--margin#id_0
                             -
                                 var arrayWarningText = [
                                 {
@@ -134,7 +135,7 @@ block body
                                 ]
                             +block-warning(arrayWarningText)
 
-                        .block-items--margin2.js-block-scroll#id_0
+                        .block-items--margin2.js-block-scroll
                             -
                                 var arrayItems = [
                                 {
@@ -176,7 +177,7 @@ block body
                                 ]
                             +block-items(arrayItems)
 
-                        .block-images-text--margin
+                        .block-images-text--margin#id_1
                             -
                                 var arrayBlock = [
                                 {
@@ -186,12 +187,12 @@ block body
                                 ]
                             +block-images-text(arrayBlock)
 
-                        .block-text--margin
+                        .block-text--margin#id_2
                             +block-text('Программа GSA состоит из двух циклов. Вы можете начать с 15 октября или присоединиться в феврале. <br/><br/>' +
                             '1-й цикл (интенсивный, 5 месяцев) - с октября по февраль <br/>' +
                             '2-й цикл (7 месяцев) - с февраля по сентябрь с перерывом на летние месяцы')
 
-                        .block-images-text--margin
+                        .block-images-text--margin#id_3
                             -
                                 var arrayBlock = [
                                 {
@@ -233,7 +234,7 @@ block body
                             +block-items(arrayItems)
 
 
-                        .block-list--margin
+                        .block-list--margin#id_6
                            .gsa-info
                                -
                                    var arrayItems = [

@@ -10,7 +10,8 @@ $(() => {
         adaptiveHeight: false,
         dots: true,
         mobileFirst: true,
-        pauseOnDotsHover: true
+        pauseOnDotsHover: true,
+        arrows: true
     });
 
 
