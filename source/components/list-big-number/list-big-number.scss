@@ -1,0 +1,114 @@
+/* list-big-number style */
+
+.list-big-number {
+    list-style: none;
+    padding: 50px 30px 90px;
+    background-color: #f4f4f2;
+    margin-left: -30px;
+    position: relative;
+
+    @media (max-width: 991px) {
+        margin-left: 0px;
+        padding: 25px 15px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -200%;
+        top: 0;
+        width: 200%;
+        height: 100%;
+        background-color: #f4f4f2;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        padding-left: 150px;
+
+        @media (max-width: 767px) {
+            padding-left: 0;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    &__item {
+        padding-left: 150px;
+        position: relative;
+        font-size: 22px;
+        line-height: 35px;
+        font-weight: 300;
+        margin-bottom: 65px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 25px;
+            padding-left: 0;
+            padding-top: 150px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 125px;
+            width: 100%;
+            height: 125px;
+            background-color: #cedc00;
+            border-radius: 100%;
+
+            @media (max-width: 767px) {
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        &.one {
+            &:before {
+                background: url("../images/college/icon-13.png") no-repeat center;
+            }
+        }
+
+        &.two {
+            &:before {
+                background: url("../images/college/icon-14.png") no-repeat center;
+            }
+        }
+
+        &.three {
+            &:before {
+                background: url("../images/college/icon-15.png") no-repeat center;
+            }
+        }
+    }
+
+    &__date {
+        font-weight: 500;
+        display: block;
+    }
+}

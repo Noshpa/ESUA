@@ -1,0 +1,13 @@
+
+mixin slick(arraySlick)
+    .slick-wrapper.js-slick-wrapper
+        .slick.js-slick(data-time="7")
+            each val in arraySlick
+                .slick__item
+                    .slick__item-text !{val.text}
+                    .slick__item-profile
+                        .slick__item-profile-wrapper
+                            img(src= val.img).slick__item-profile-image
+                            span.slick__item-profile-name !{val.name}
+        .slick__progress
+            .slick__progress-bar.js-progress-bar

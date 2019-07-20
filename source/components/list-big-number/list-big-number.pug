@@ -1,0 +1,10 @@
+//- list-big-number module
+
+mixin list-big-number(title, arrayList)
+    .list-big-number
+        .list-big-number__title= title
+        ul.list-big-number__list
+            each val in arrayList
+                li.list-big-number__item(class=val.class)
+                    span.list-big-number__date= val.date
+                    span.list-big-number__text !{val.text}

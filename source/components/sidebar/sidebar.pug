@@ -1,0 +1,9 @@
+//- sidebar module
+mixin sidebar(arrayText)
+    .wrapper-sidebar.js-parent-sidebar.js-perfect-scrollbar
+        .sidebar-title-mobile.js-sidebar-modal Программа
+        .sidebar
+            ul.sidebar__list.js-sidebar-list
+                each val in arrayText
+                    li.sidebar__list-item
+                        a(href=val.id  class=val.className ).sidebar__list-link.js-scroll= val.text

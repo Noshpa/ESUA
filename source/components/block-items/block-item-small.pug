@@ -1,0 +1,8 @@
+//- block-items-small module
+
+mixin block-items-small(arrayItemsSmall)
+    each val in arrayItemsSmall
+        .block-items.block-items--small
+            .block-items__images
+                img(src=val.images)
+            .block-items__text= val.text

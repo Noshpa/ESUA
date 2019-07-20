@@ -1,0 +1,8 @@
+//- block-warning module
+
+mixin block-warning(arrayWarningText)
+    each val in arrayWarningText
+        .block-warning
+            .block-warning__images
+                img(src=val.img)
+            .block-warning__text= val.text

@@ -1,0 +1,8 @@
+//- block-images-text module
+
+mixin block-images-text(arrayBlock)
+    each val in arrayBlock
+        .block-images-text
+            .block-images-text__text !{val.text}
+            .block-images-text__images
+                img(src=val.img)

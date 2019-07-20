@@ -1,0 +1,41 @@
+/* block-text style */
+
+.block-text {
+    background-color: #f4f4f2;
+    padding: 90px 100px 90px 30px;
+    font-size: 22px;
+    font-weight: 300;
+    margin-left: -30px;
+    position: relative;
+
+    @media (max-width: 991px) {
+        margin-left: 0;
+        font-size: 18px;
+        padding: 35px 15px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -200%;
+        top: 0;
+        width: 200%;
+        height: 100%;
+        background-color: #f4f4f2;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+}
+
+
+.question-program {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 45px;
+}

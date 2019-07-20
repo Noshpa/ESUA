@@ -1,0 +1,22 @@
+/* block-images style */
+
+.block-images {
+    background-color: #f4f4f2;
+    display: flex;
+    position: relative;
+    //z-index: -1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -200%;
+        top: 0;
+        width: 200%;
+        height: 100%;
+        background-color: #f4f4f2;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+}

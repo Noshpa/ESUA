@@ -1,0 +1,9 @@
+//- block-tumbnail module
+
+mixin block-thumbnail(arrayThumbnail)
+    .block-thumbnail
+        each val in arrayThumbnail
+            a(href="javascript:void(0)").block-thumbnail__items
+                .block-thumbnail__images
+                    img(src= val.img)
+                .block-thumbnail__text= val.text

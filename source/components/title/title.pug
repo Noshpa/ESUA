@@ -1,0 +1,10 @@
+//- title module
+
+mixin title(arrayTitle)
+    each val in arrayTitle
+        .title-page
+            .title-page__images
+                img(src= val.img alt="")
+            .title-page__wrapper
+                h1.title-page__title !{val.title}
+                .title-page__text-small= val.text

@@ -1,0 +1,323 @@
+extends ../views/_default
+
+//- mixins
+include ../components/meta/meta
+include ../components/sidebar/sidebar
+include ../components/block-images/block-images
+include ../components/block-items/block-items
+include ../components/block-items/block-items-row
+include ../components/block-items/block-item-small
+include ../components/block-images-text/block-images-text
+include ../components/block-text/block-text
+include ../components/block-thumbnail/block-thumbnail
+include ../components/title/title
+include ../components/block-warning/block-warning
+include ../components/list-big-number/list-big-number
+include ../components/form/form
+include ../components/slick/slick
+include ../components/header/header
+include ../components/footer/footer
+
+block var
+    -
+        var fonts = [
+        'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=latin,cyrillic'
+        ];
+
+        var css = [
+        '../css/extended.css',
+        '../css/style.css',
+        '../css/markup.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.min.css',
+        'https://educationusarussia.org/wp-content/themes/lincoln-unnell/web/css/main.css?ver=1563100455',
+        'https://educationusarussia.org/wp-content/themes/lincoln-unnell/web/css/media.css?ver=1561585544',
+        'https://educationusarussia.org/wp-content/themes/lincoln-unnell/web/css/fonts.css?ver=1539194555'
+        ];
+
+        var js = [
+        'https://code.jquery.com/jquery-3.4.1.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
+        'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.8/inputmask/inputmask.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.8/inputmask/jquery.inputmask.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js'
+        ];
+
+block head
+    +meta('', '', css, js, fonts)
+
+block body
+    block header
+        header
+            +header()
+
+    block main
+        main.main.lost-found
+            .container.js-parent-sticky
+                .col-left.js-sticky
+                    -
+                        var arrayText = [
+                        {
+                        className: 'is-active',
+                        text: 'Из чего она состоит?',
+                        id: '#id_0'
+                        },
+                        {
+                        className: '',
+                        text: 'Что вас ждет?',
+                        id: '#id_1'
+                        },
+                        {
+                        className: '',
+                        text: 'Для кого она предназначена?',
+                        id: '#id_2'
+                        },
+                        {
+                        className: '',
+                        text: 'Сколько требуется времени на прохождение?',
+                        id: '#id_3'
+                        },
+                        {
+                        className: '',
+                        text: 'Что я получу после окончания «Родительского собрания»?',
+                        id: '#id_4'
+                        },
+                        {
+                        className: '',
+                        text: 'Каковы преимущества и дополнительные возможноститой программы?',
+                        id: '#id_5'
+                        },
+                        {
+                        className: '',
+                        text: 'Отзывы',
+                        id: '#id_6'
+                        },
+                        {
+                        className: '',
+                        text: 'Хочу пройти «Родительское собрание».Как это сделать?',
+                        id: '#id_7'
+                        },
+                        ]
+                    +sidebar(arrayText)
+                .col-right
+                    .content
+                        -
+                            var arrayTitle = [
+                            {
+                            img: "../images/lf/lf.png",
+                            title: "Lost& <br/> Found: <br/> underground",
+                            text: "Cycle"
+                            }
+                            ]
+                        +title(arrayTitle)
+                        .text.text--margin
+                            | Цикл Lost & Found. Представьте себе, что вы потеряли мотивацию
+                            | для поступления на бакалавриат в вузы США. Опустили руки.
+                            | для поступления на бакалавриат в вузы США. Опустили руки.
+                            | Начали проходить 120 Credits и по какой то причине остановились.
+                            | Не смогли пройти конкурс в CCC… Что делать? Продолжать
+                            | двигаться вперед и поступать!
+
+                            p.text--margin-p
+                                | На помощь приходит Lost & Found — цикл встреч 1 раз в квартал
+                                | по основным аспектам поступления. Вы сможете заново
+                                | систематизировать всю информацию, обрести уверенность в себе
+                                | и продолжить путь поступления в вузы США: успешно закончить
+                                | программу 120 Credits undergraduate; и начать (или продолжить)
+                                | индивидуальные консультации по стратегии поступления.
+
+                        .block-images--margin
+                            +block-images("../images/lf/images-1.png", "#f4f4f2")
+
+
+                        .block-warning--margin
+                            -
+                                var arrayWarningText = [
+                                {
+                                img: "../images/college/icon-8.png",
+                                text: "Цикл состоит из 4х интересных тематических встреч(в центрах или онлайн) с консультантом EducationUSA Russia.Из них как минимум две желательно посетить с родителями!  "
+                                }
+                                ]
+                            +block-warning(arrayWarningText)
+
+                        .block-items--margin2.js-block-scroll#id_0
+                            -
+                                var arrayItems = [
+                                {
+                                images: "../images/lf/icon-1.png",
+                                textTitle: "Шаг 1 (зима)",
+                                text: "Ответим на вопросы по процессу поступления, выбору программ, \n"+
+                                "выработке общей стратегии действий. Также расскажем, \n"+
+                                "как провести оценку своих возможностей и шансов \n"+
+                                "на поступление, поговорим о расстановке приоритетов \n"+
+                                "и планировании времени. "
+                                },
+                                {
+                                images: "../images/lf/icon-2.png",
+                                textTitle: "Шаг 2 (весна)",
+                                text: "Вы узнаете, как приступить к выбору вузов и составлению \n"+
+                                "первоначального списка. Особое внимание будет уделено \n"+
+                                "вопросам поиска источников финансовой помощи, а также \n"+
+                                "рекомендациям по поступлению в вузы США."
+                                },
+                                {
+                                images: "../images/lf/icon-3.png",
+                                textTitle: "Шаг 3 (лето)",
+                                text: "Готовим пакет документов. Мы рассмотрим требования вузов США и поговорим о документах, которые нужно будет заполнить " +
+                                "и разослать. Вы также узнаете о Common Application и Coalition Application — единых формах заявок для поступления в вузы."
+                                },
+                                {
+                                images: "../images/lf/icon-4.png",
+                                textTitle: "Шаг 4 (осень)",
+                                text: "Подаем документы на получение финансовой помощи.Особое внимание будет уделено различным типах финансовых" +
+                                "форм, тому, как и когда их нужно будет заполнить и какие" +
+                                "дополнительные документы приложить. Мы прокомментируем наиболее сложные пункты и ответим на часто задаваемые вопросы."
+                                },
+                                {
+                                images: "../images/lf/icon-5.png",
+                                textTitle: "В течении года:",
+                                text: "дополнительные лекции и семинары по теме поступление на программы бакалавриата в США."
+                                }
+                                ]
+                            +block-items(arrayItems)
+
+                        .block-images-text--margin
+                            -
+                                var arrayBlock = [
+                                {
+                                img: "../images/lf/images-2.png",
+                                text: "Для школьников, планирующих поступить на бакалавриат в колледжи \n"+
+                                "или университеты США"
+                                }
+                                ]
+                            +block-images-text(arrayBlock)
+
+                        .block-items--margin.js-block-scroll#id_1
+                            p.text-thin Для всех, у кого возникли трудности на пути к долгожданному поступлению:
+                            .flex.flex--row.block-icon-wrapper
+                                -
+                                    var arrayItemsRow = [
+                                    {
+                                    images: "../images/lf/icon-6.png",
+                                    text: "не получилось пройти \n"+
+                                    "конкурс в программу \n"+
+                                    "Competitive College \n"+
+                                    "Club (CCC);"
+                                    },
+                                    {
+                                    images: "../images/lf/icon-7.png",
+                                    text: "запутался \n"+
+                                    "с оформлением \n"+
+                                    "и подачей документов;"
+                                    },
+                                    {
+                                    images: "../images/lf/icon-8.png",
+                                    text: "начал самостоятельно \n"+
+                                    "программу 120 Credits, \n"+
+                                    "но потом засомневался \n"+
+                                    "в своих силах и бросил;"
+                                    },
+                                    {
+                                    images: "../images/lf/icon-9.png",
+                                    text: "подал документы \n"+
+                                    "в вузы США, \n"+
+                                    "но не поступил \n"+
+                                    "с первого раза"
+                                    }
+                                    ]
+                                +block-items-row(arrayItemsRow)
+
+                        .block-text--margin
+                            +block-text("Цикл Lost & Found длится 1 год и состоит из 4 встреч, каждая из которых \n" +
+                            "проходит раз в три месяца. Задача цикла — чтобы вы обрели в себе \n" +
+                            "уверенность, прошли успешно 120 Credits Undergraduate и начали работать \n" +
+                            "с экспертом EducationUSA Russia. И это вы можете сделать в любой момент!")
+
+
+                        .block-items--margin1.js-block-scroll#id_4
+                            p.text-thin Цикл не обязательно закончить полностью. После любого шага вы можете поверить в себя, успешно пройти 120 Credits Undergraduate и заново начать
+                                        |индивидуальные консультации с экспертами EducationUSA Russia.
+                            -
+                                var arrayItems = [
+                                {
+                                images: "../images/lf/icon-10.png",
+                                text: "Каждый шаг цикла уникален и позволит вам разобраться в тонкостях: как выбрать вуз, подготовить пакет документов \n"+
+                                "и получить финансовую помощь!"
+                                },
+                                {
+                                images: "../images/lf/icon-12.png",
+                                text: "Безусловно, вы сможете обрести уверенность в себе в преодолении трудностей, связанных с поступлением \n"+
+                                "в вузы США!"
+                                }
+                                ]
+                            +block-items(arrayItems)
+
+
+                        .block-thumbnail--margin
+                            -
+                                var arrayThumbnail = [
+                                {
+                                img: "../images/college/images-3.png",
+                                text: "Возможность развить \n"+
+                                "свои творческие и организаторские способности, попробовать свои силы в качестве инициаторов и лидеров проекта и научиться самостоятельности и ответственности."
+                                },
+                                {
+                                img: "../images/college/images-4.png",
+                                text: "Участие в образовательных конкурсах и возможность отправиться на летние подготовительные программы в Yale University, Smith College и другие;"
+                                },
+                                {
+                                img: "../images/college/images-5.png",
+                                text: "Общение со сверстниками, которые так же, как и вы, хотят учиться в США. Вам будет что обсудить! Программа поможет найти новых друзей и единомышленников."
+                                }
+                                ]
+                            +block-thumbnail(arrayThumbnail)
+                        -
+                            var arraySlick = [
+                            {
+                            text: " “Отправляли сына в этом году в США на программу в Сан-Диего. В аэропорту \n"+
+                            "\t\t\tвстретили отлично, быстро доехали до кампуса мин. 20-25. В резиденции \n"+
+                            "\t\t\tв комнате жил один, хорошие условия. Все находится на одной территории университета Сан-Диего. Питание хорошее – разнообразно и вкусно. Занятия по английскому языку интересные. В группе по 10-15 человек. Были ребята из Китая, Туниса, Испании, Бразилии и Мексики. Понравилась учитель Veronica. Русско-говорящих ребят не было в его заезд. <br/> <br/> \n"+
+                            "\n"+
+                            "Очень хорошо подтянул язык в этот раз – улучшился акцент, намного свободнее стал говорить, не стесняется и хорошо понимает английскую речь. Очень понравились вожатые. Хорошая и интересная внеклассная программа. Сыну все очень и очень понравилось. Спасибо вам за организацию этой учебной поездки!",
+                            img: "../images/images-6.png",
+                            name: "Татьяна, мама Василия 14 лет"
+                            },
+                            {
+                            text: " “ Отправляли сына в этом году в США на программу в Сан-Диего. В аэропорту \n"+
+                            "\t\t\tвстретили отлично, быстро доехали до кампуса мин. 20-25. В резиденции \n"+
+                            "\t\t\tв комнате жил один, хорошие условия. Все находится на одной территории университета Сан-Диего. Питание хорошее – разнообразно и вкусно. Занятия по английскому языку интересные. В группе по 10-15 человек. Были ребята из Китая, Туниса, Испании, Бразилии и Мексики. Понравилась учитель Veronica. Русско-говорящих ребят не было в его заезд. <br/> <br/> \n"+
+                            "\n"+
+                            "Очень хорошо подтянул язык в этот раз – улучшился акцент, намного свободнее стал говорить, не стесняется и хорошо понимает английскую речь. Очень понравились вожатые. Хорошая и интересная внеклассная программа. Сыну все очень и очень понравилось. Спасибо вам за организацию этой учебной поездки!",
+                            img: "../images/images-6.png",
+                            name: "Татьяна, мама Василия 14 лет"
+                            },
+                            {
+                            text: " “ Отправляли сына в этом году в США на программу в Сан-Диего. В аэропорту \n"+
+                            "\t\t\tвстретили отлично, быстро доехали до кампуса мин. 20-25. В резиденции \n"+
+                            "\t\t\tв комнате жил один, хорошие условия. Все находится на одной территории университета Сан-Диего. Питание хорошее – разнообразно и вкусно. Занятия по английскому языку интересные. В группе по 10-15 человек. Были ребята из Китая, Туниса, Испании, Бразилии и Мексики. Понравилась учитель Veronica. Русско-говорящих ребят не было в его заезд. <br/> <br/> \n"+
+                            "\n"+
+                            "Очень хорошо подтянул язык в этот раз – улучшился акцент, намного свободнее стал говорить, не стесняется и хорошо понимает английскую речь. Очень понравились вожатые. Хорошая и интересная внеклассная программа. Сыну все очень и очень понравилось. Спасибо вам за организацию этой учебной поездки!",
+                            img: "../images/images-6.png",
+                            name: "Татьяна, мама Василия 14 лет"
+                            },
+                            ]
+                        +slick(arraySlick)
+
+                        .block-text--margin1
+                            +block-text("Вы можете присоединиться с самого первого шага цикла, который проходит \n" +
+                            "зимой, или на любом другом этапе. Просто приходите на встречу с консультантом (место проведения всегда указано в Афише)  или \n" +
+                            "присоединяйтесь онлайн, и мы поможем разобраться в сложных для вас \n" +
+                            "моментах. Следите за расписание наших мероприятий в Афише. Анонс цикла по городам в центрах или online идет с аббревиатурой” Цикл “L&F: undergraduate. Шаг (описание).")
+
+                        +form()
+
+                        .question-program.t-a-c
+                            | Если у вас есть вопросы по программе,<br> напишите на <a class="link-red" href="mail:adviser@educationusarussia.org">adviser@educationusarussia.org</a>
+
+    block footer
+        footer
+            +footer()

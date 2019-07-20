@@ -1,0 +1,10 @@
+//- block-items module
+
+mixin block-items-row(arrayItemsRow)
+    each val in arrayItemsRow
+        .block-items.block-items--row
+            .block-items__images
+                img(src=val.images)
+            .block-items__text
+                span.block-items__text-title= val.textTitle
+                span= val.text

@@ -1,0 +1,24 @@
+// =============================
+// Import
+// =============================
+
+// CORE IMPORT
+// =============================
+@import 'core/core';
+
+// Import modules
+// =============================
+@import '../../components/**/*.scss';
+
+
+// OTHER STYLE IMPORT
+// =============================
+@import 'common';
+
+// VENDORS IMPORT
+// =============================
+@import 'vendors/vendors';
+
+// MARKUP
+// =============================
+@import 'markup';

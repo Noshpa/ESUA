@@ -1,0 +1,22 @@
+//- form module
+
+mixin form
+    form.form.js-form(data-url="https://stocknewsapi.com/api/v1?tickers=TSLA&items=10&token")
+        .form-group
+            input.form__input(placeholder="Ваше имя" name="name" required)
+            span.form__input-error
+        .form-group
+            input.form__input.js-validate-phone.js-input-mask-phone(placeholder="Телефон" name="phone" required)
+            span.form__input-error
+        .form-group
+            input.form__input(placeholder="Город" name="city" required)
+            span.form__input-error
+        .form-group
+            input.form__input.js-validate-email(placeholder="Email" type="email" name="email" required)
+            span.form__input-error
+
+        label.checkbox
+            input.checkbox__input(type="checkbox" name="checkbox"  required)
+            .checkbox__text.js-text-checkbox Нажимая кнопку «Подписаться», я даю свое согласие на обработку персональных данных,<br/> в соотвествии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», <br/> на условиях для целей определенных в согласии на обработку персональных данных
+
+        button(type='submit').btn-red.form__button <span class="btn-red__bold"> Подписаться</span> на новости о наборе
