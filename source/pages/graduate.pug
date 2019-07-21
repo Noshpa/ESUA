@@ -65,7 +65,7 @@ block body
                         {
                         className: '',
                         text: 'Что вас ждет?',
-                        id: '#id_0'
+                        id: '#id'
                         },
                         {
                         className: '',
@@ -89,11 +89,6 @@ block body
                         },
                         {
                         className: '',
-                        text: 'Отзывы',
-                        id: '#id_5'
-                        },
-                        {
-                        className: '',
                         text: 'Хочу пройти GSAP. Как это сделать? ',
                         id: '#id_6'
                         },
@@ -101,16 +96,9 @@ block body
                     +sidebar(arrayText)
                 .col-right
                     .content
-                        -
-                            var arrayTitle = [
-                            {
-                            img: "./images/gsa/gsa.png",
-                            title: "Graduate <br/> Students <br/> Advising",
-                            text: "Program"
-                            }
-                            ]
-                        +title(arrayTitle)
-                        .text.text--margin
+                        .logo
+                            img(src="./images/gsa/gsa.png" alt="GSA")
+                        .text.text--margin.js-block-scroll#id_0
                             | Graduate Students Advising Program (GSAp) — это интенсивная
                             | программа групповых занятий (длительность каждого цикла —
                             | от 4 до 6 месяцев), которая подготовит вас к поступлению
@@ -122,7 +110,7 @@ block body
                             +block-images("./images/gsa/images-1.png", "#f4f4f2")
 
 
-                        .block-warning--margin#id_0
+                        .block-warning--margin.js-block-scroll#id
                             -
                                 var arrayWarningText = [
                                 {
@@ -135,7 +123,7 @@ block body
                                 ]
                             +block-warning(arrayWarningText)
 
-                        .block-items--margin2.js-block-scroll
+                        .block-items--margin2
                             -
                                 var arrayItems = [
                                 {
@@ -177,7 +165,7 @@ block body
                                 ]
                             +block-items(arrayItems)
 
-                        .block-images-text--margin#id_1
+                        .block-images-text--margin.js-block-scroll#id_1
                             -
                                 var arrayBlock = [
                                 {
@@ -187,12 +175,12 @@ block body
                                 ]
                             +block-images-text(arrayBlock)
 
-                        .block-text--margin#id_2
+                        .block-text--margin.js-block-scroll#id_2
                             +block-text('Программа GSA состоит из двух циклов. Вы можете начать с 15 октября или присоединиться в феврале. <br/><br/>' +
                             '1-й цикл (интенсивный, 5 месяцев) - с октября по февраль <br/>' +
                             '2-й цикл (7 месяцев) - с февраля по сентябрь с перерывом на летние месяцы')
 
-                        .block-images-text--margin#id_3
+                        .block-images-text--margin.js-block-scroll#id_3
                             -
                                 var arrayBlock = [
                                 {
@@ -234,7 +222,7 @@ block body
                             +block-items(arrayItems)
 
 
-                        .block-list--margin#id_6
+                        .block-list--margin.js-block-scroll#id_6
                            .gsa-info
                                -
                                    var arrayItems = [

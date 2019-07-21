@@ -4,9 +4,8 @@ class Scroll {
         this.$el = $(el);
 
         this.blockToScroll = $('.js-block-scroll');
-        this.arrayOffset = [];
+        this.saveOffset();
         this.setEvents();
-        // this.saveOffset();
     }
 
     setEvents() {
@@ -15,37 +14,43 @@ class Scroll {
             this.scrollBlock($(e.target));
             this.toggleClass($(e.target));
         });
-
-        // $(window).on('scroll', debounce(() => {
-        //     this.toggleActiveClass();
-        // }));
     }
 
     scrollBlock($target) {
         const id = $target.attr('href');
         const top = $(id).offset().top;
 
-        $('body, html').animate({scrollTop: top}, 1500);
+        $('body, html').stop().animate({ scrollTop: top}, 1500);
     }
 
     toggleClass($target) {
-        this.$el.closest('.js-sidebar-list').find('.js-scroll').removeClass('is-active');
-        $target.addClass('is-active');
+        setTimeout(() => {
+            this.$el.closest('.js-sidebar-list').find('.js-scroll').removeClass('is-active');
+            $target.addClass('is-active');
+
+        }, 200);
     }
 
     saveOffset() {
+        const arrayOffset = [];
+
         this.blockToScroll.each((i, item) => {
             const offset =  $(item).offset().top;
-            this.arrayOffset.push(offset);
+            arrayOffset.push(offset);
         });
-    }
 
-    toggleActiveClass() {
-        $(this.arrayOffset).each((i, item) => {
-            if (item <= $(window).scrollTop()) {
-                $('.js-scroll').removeClass('is-active');
-                $($('.js-sidebar-list').find('.js-scroll')[i]).addClass('is-active');
-            }
+        $(window).scroll(function(){
+            const winScrollTop = $(this).scrollTop();
+            const winHeight = $(window).height();
+
+            $(arrayOffset).each((i, item) => {
+                const scrollToElem = item - winHeight;
+
+                if (winScrollTop / 1.5 > scrollToElem) {
+                    $('.js-scroll').removeClass('is-active');
+                    $($('.js-sidebar-list').find('.js-scroll')[i]).addClass('is-active');
+                }
+            });
         });
     }
 }

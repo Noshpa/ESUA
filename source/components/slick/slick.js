@@ -9,6 +9,7 @@ $(() => {
     $slick.slick({
         adaptiveHeight: false,
         dots: true,
+        appendArrows: $('.slick-arrows'),
         mobileFirst: true,
         pauseOnDotsHover: true,
         arrows: true

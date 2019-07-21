@@ -106,16 +106,9 @@ block body
                     +sidebar(arrayText)
                 .col-right
                     .content
-                        -
-                            var arrayTitle = [
-                            {
-                            img: "./images/lf/lf.png",
-                            title: "Lost& <br/> Found: <br/> underground",
-                            text: "Cycle"
-                            }
-                            ]
-                        +title(arrayTitle)
-                        .text.text--margin#id_0
+                        .logo
+                            img(src="./images/lf/lf.png" alt="LF")
+                        .text.text--margin.js-block-scroll#id_0
                             | Цикл Lost & Found. Представьте себе, что вы потеряли мотивацию
                             | для поступления на бакалавриат в вузы США. Опустили руки.
                             | для поступления на бакалавриат в вузы США. Опустили руки.
@@ -145,7 +138,7 @@ block body
                                 ]
                             +block-warning(arrayWarningText)
 
-                        .block-items--margin2.js-block-scroll
+                        .block-items--margin2
                             -
                                 var arrayItems = [
                                 {
@@ -186,7 +179,7 @@ block body
                                 ]
                             +block-items(arrayItems)
 
-                        .block-images-text--margin#id_1
+                        .block-images-text--margin.js-block-scroll#id_1
                             -
                                 var arrayBlock = [
                                 {
@@ -197,7 +190,7 @@ block body
                                 ]
                             +block-images-text(arrayBlock)
 
-                        .block-items--margin.js-block-scroll
+                        .block-items--margin
                             p.text-thin Для всех, у кого возникли трудности на пути к долгожданному поступлению:
                             .flex.flex--row.block-icon-wrapper
                                 -
@@ -232,7 +225,7 @@ block body
                                     ]
                                 +block-items-row(arrayItemsRow)
 
-                        .block-text--margin#id_2
+                        .block-text--margin.js-block-scroll#id_2
                             +block-text("Цикл Lost & Found длится 1 год и состоит из 4 встреч, каждая из которых \n" +
                             "проходит раз в три месяца. Задача цикла — чтобы вы обрели в себе \n" +
                             "уверенность, прошли успешно 120 Credits Undergraduate и начали работать \n" +
@@ -308,7 +301,7 @@ block body
                             ]
                         +slick(arraySlick)
 
-                        .block-text--margin1#id_6
+                        .block-text--margin1.js-block-scroll#id_6
                             +block-text("Вы можете присоединиться с самого первого шага цикла, который проходит \n" +
                             "зимой, или на любом другом этапе. Просто приходите на встречу с консультантом (место проведения всегда указано в Афише)  или \n" +
                             "присоединяйтесь онлайн, и мы поможем разобраться в сложных для вас \n" +

@@ -171,9 +171,15 @@ img {
     align-items: flex-start;
 }
 
+.program {
+    font-family: 'Roboto', sans-serif ;
+}
+
 //College
 
 .college {
+    font-family: 'Roboto', sans-serif ;
+
     .title-page__title {
         margin-bottom: 25px;
         line-height: 50px;
@@ -263,6 +269,7 @@ img {
 }
 
 .gsa {
+    font-family: 'Roboto', sans-serif ;
 
     .sidebar {
         @media (max-width: 991px) {
@@ -369,6 +376,8 @@ img {
 }
 
 .lost-found {
+    font-family: 'Roboto', sans-serif ;
+
     .title-page__title {
         line-height: 41px;
     }
@@ -484,6 +493,8 @@ img {
 }
 
 .credit {
+    font-family: 'Roboto', sans-serif ;
+
     .title-page__title {
         line-height: 45px;
         margin-bottom: 85px;
@@ -600,6 +611,8 @@ img {
 
 
 .pre-ccc {
+    font-family: 'Roboto', sans-serif ;
+
     .pre-ccc-info {
         padding: 85px 30px 70px;
         margin-left: -30px;
